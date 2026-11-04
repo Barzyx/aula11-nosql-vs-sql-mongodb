@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-// ⚠️ ADAPTE à sua API Express real (porta e caminho).
+// URL da API Express (repo express-server-dia28_M-s08, porta 3000).
 // Dá para sobrescrever criando um arquivo .env na raiz com:
 // VITE_API_URL=http://localhost:3000/produtos
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:3000/produtos'
@@ -46,7 +46,9 @@ export function ListaProdutos() {
     <ul aria-label="lista de produtos">
       {produtos.map((item) => (
         <li key={item._id ?? item.id}>
-          {item.nome} — R$ {item.preco}
+          {item.nome}
+          {item.categoria ? ` — ${item.categoria}` : ''}
+          {item.preco !== undefined ? ` — R$ ${item.preco}` : ''}
           {item.ativo === undefined ? '' : item.ativo ? ' (ativo)' : ' (inativo)'}
         </li>
       ))}

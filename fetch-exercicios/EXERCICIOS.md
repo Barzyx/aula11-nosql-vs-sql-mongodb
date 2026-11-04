@@ -7,7 +7,7 @@ Abra `http://localhost:3000/produtos` no DevTools (aba Network → Response) e v
 - Se for **`"id": 1`** (número inteiro incremental) → indica **SQL** (Postgres/MySQL).
 - Se for **`"_id": "65f1a2b3c4d5e6f7a8b9c0d1"`** (string de 24 caracteres hexadecimais) → indica **MongoDB** (ObjectId).
 
-**Resposta da minha API:** o identificador é `____` (preencher com o que aparecer no seu JSON), o que indica `____`.
+**Resposta da minha API:** o identificador é `id`, um número inteiro (1, 2, 3, 4), sem `_id`. Todos os objetos têm os mesmos campos (`id`, `nome`, `categoria`), sem subdocumentos e sem campos variáveis. Isso indica **SQL**.
 
 **Justificativa:** o `_id` em formato ObjectId (24 hex, gerado automaticamente com timestamp) é a marca registrada do MongoDB. Bancos SQL costumam usar `id` inteiro incremental.
 
