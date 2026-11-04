@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/fetch-exercicios-aula07/',
+  base: '/aula11-nosql-vs-sql-mongodb/',
   plugins: [react()],
   server: {
     allowedHosts: true,
